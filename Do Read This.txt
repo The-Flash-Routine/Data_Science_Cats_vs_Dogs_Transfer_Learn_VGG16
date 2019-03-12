@@ -1,0 +1,22 @@
+1. In first model i used 1000 cat images,1000 dog images for training from [0,1000)
+   Then i used 200 cat images,200 dog images for validation [1000,1200) 
+   Then i used 200 cat images,200 dog images for testing [1200,1400)
+   I got ~47% accuracy on testing
+   I got ~83% accuracy on training
+   So clearly problem is of generalization of high variance or overfitting.
+   I did 25 epochs on training set
+   Dense layers added were
+   (i)Flatten layer - Flatting out convulation output
+   (ii)Dense layer 10 units relu
+   (iii)Dense layer 5 units relu
+   (iv)Dense layer 1 units sigmoid
+
+2. Now in model 2 i will add dropout(0.6) after 1st dense layer(10 units)
+   And batch size increased from 100 to 200
+   [Everything kept same] 
+   By this i got ~72% accuracy on training set
+   And ~77% accuracy on training...
+   So it is generalizing well and Dropout helped
+   
+   Now we can get more accuracy when we training with bigger amount of dataset(training set)....
+   But due to computational limitation on my PC can't do that.
